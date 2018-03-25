@@ -296,11 +296,13 @@ app.controller("calendarAppCtrl", [
               $scope.generateCalendarsOutput(selectedDate, selectedEndDate);
             },
             function(errorReponse) {
+              $scope.calendarModel.holidays = [];
               $log.error(errorReponse);
               $scope.generateCalendarsOutput(selectedDate, selectedEndDate);
             }
           );
         } else {
+          $scope.calendarModel.holidays = [];
           $scope.generateCalendarsOutput(selectedDate, selectedEndDate);
         }
       }

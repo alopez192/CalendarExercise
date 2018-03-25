@@ -5,12 +5,14 @@
     <link rel="stylesheet" href="/Styles/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="/Scripts/Angular/calendarApp.js"></script>
+    <script src="/Scripts/Angular/Directives/formOnChangeDirective.js"></script>
     <script src="/Scripts/Angular/Controllers/calendarAppCtrl.js"></script>
 </head>
 <body>
     <body ng-app="calendarApp">
         <div ng-controller="calendarAppCtrl" id="calendarInputs">
-            <form action="javascript:void(0)">
+            <br>
+            <form action="javascript:void(0)" form-on-change="generateCalendarsHtml()">
                 <div class="block">
                     <label for="startDate">Start Date:</label>
                     <input type="date" name="startDate" id="startDate" ng-model="calendarModel.startDate">
@@ -24,6 +26,8 @@
                     <input type="text" name="countryCode" id="countryCode" ng-model="calendarModel.countryCode">
                 </div>
             </form>
+            <hr>
+            
         </div>
     </body>
 </body>

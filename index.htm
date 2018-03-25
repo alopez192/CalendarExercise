@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Calendar Exercise</title>
+    <link rel="stylesheet" href="/Styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="/Scripts/Angular/calendarApp.js"></script>
+    <script src="/Scripts/Angular/Controllers/calendarAppCtrl.js"></script>
+</head>
+<body>
+    <body ng-app="calendarApp">
+        <div ng-controller="calendarAppCtrl" id="calendarInputs">
+            <form action="javascript:void(0)">
+                <div class="block">
+                    <label for="startDate">Start Date:</label>
+                    <input type="date" name="startDate" id="startDate" ng-model="calendarModel.startDate">
+                </div>
+                <div class="block">
+                    <label for="numberOfDays">Number of Days:</label>
+                    <input type="number" name="numberOfDays" id="numberOfDays" ng-model="calendarModel.numberOfDays">
+                </div>
+                <div class="block">
+                    <label for="countryCode">Country Code:</label>
+                    <input type="text" name="countryCode" id="countryCode" ng-model="calendarModel.countryCode">
+                </div>
+            </form>
+        </div>
+    </body>
+</body>
+</html>

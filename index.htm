@@ -6,12 +6,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="/Scripts/Angular/calendarApp.js"></script>
     <script src="/Scripts/Angular/Directives/formOnChangeDirective.js"></script>
+    <script src="/Scripts/Angular/Services/calendarService.js"></script>
     <script src="/Scripts/Angular/Controllers/calendarAppCtrl.js"></script>
 </head>
 <body>
     <body ng-app="calendarApp">
         <div ng-controller="calendarAppCtrl" id="calendarInputs">
-            <br>
+            <label class="important">Please note that in order to have holiday highlited, you need to select a 'Start Date' with a number of dates in which the new date range do not includes current year.</label><br>
+            <label class="important">This due to some restrictions of the free API to get holidays that only allow historical data, not current year data</label>
+            <br><br>
             <form action="javascript:void(0)" form-on-change="generateCalendarsHtml()">
                 <div class="block">
                     <label for="startDate">Start Date:</label>
@@ -27,7 +30,9 @@
                 </div>
             </form>
             <hr>
-            
+
+
+            <div id="calendarResults"></div>
         </div>
     </body>
 </body>
